@@ -1,0 +1,368 @@
+* {
+    padding: 0;
+	margin: 0;
+	text-decoration: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-moz-user-select: -moz-none;
+	-ms-touch-action: none;
+	text-rendering: optimizeLegibility;
+}
+
+body {
+	background-color: #7F45A2;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	font-family: 'Lato', sans-serif;
+}
+
+ol {
+	list-style-type: none;
+	-webkit-padding-start: 0px;
+}
+
+a .checkBox {
+	font-size: 18px;
+	-webkit-touch-callout: ;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: ;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#lists {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	width: 270px;
+	background-color: #fcfcfc;
+	box-shadow: 4px 0 2px rgba(0,0,0,0.3);
+}
+
+#lists-directory {
+	overflow-y: auto;
+	overflow-x: hidden;
+	position: absolute;
+	bottom: 0px;
+	top: 40px;
+	right: 0;
+	left: 0;
+}
+
+#toolBar {
+	height: 40px;
+	border-bottom: 1px solid rgba(175,175,175,0.6);
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+	box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+#userIcon {
+	white-space: nowrap;
+    overflow:hidden !important;
+    text-overflow: ellipsis;
+}
+
+#tasks {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 270px;
+	right: 7px;
+}
+
+#tasks-inside {
+	overflow-y: auto;
+	overflow-x: hidden;
+	position: absolute;
+	bottom: 0;
+	top: 0;
+	left: 0;
+	right: 0;
+	padding: 20px 7px 0 14px;
+}
+
+.container {
+	min-width: 310px;
+}
+
+.user {
+	top: 2px;
+	width: 190px;
+
+}
+
+.user a {
+	color: #6b2c91;
+	text-decoration: none;
+}
+
+.user ul li a {
+	color: #6b2c91;
+	font-size: 14px;
+}
+
+.name-label {
+	font-family: 'Cabin', arial, sans-serif;
+	font-size: 12px;
+}
+
+.nav-lists li a {
+	color: #6b2c91;
+	font-weight: 600;
+	font-size: 16px;
+}
+
+.nav-lists li.active a {
+	background: #6b2c91;
+	color: #fcfcfc;
+}
+
+.user-menu {
+	left: 10px;
+}
+
+.taskItem {
+	margin-top: 10px;
+	height: 36px;
+}
+
+.taskItem-body {
+	position: relative;
+	overflow: hidden;
+	border-radius: 3px;
+	-webkit-box-shadow: 4px 3px 3px rgba(0,0,0,0.3);
+	box-shadow: 4px 3px 3px rgba(0,0,0,0.3);
+}
+
+.taskItem-checkBox {
+	position: absolute;
+	left: 10px;
+	top: 10px;
+}
+
+.unmarked-taskItem-checkBox {
+	position: absolute;
+	left: 10px;
+	top: 10px;
+}
+
+.dontCare-checkBox {
+	position: absolute;
+	right: 10px;
+	top: 7px;
+}
+
+.dontCare {
+	font-size: 21px;
+}
+
+.taskItem-title {
+	white-space: nowrap;
+	overflow: hidden;
+	-o-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+	margin: 0 35px 0 35px;
+	padding: 11px 0;
+	line-height: 14px;
+	color: #262626;
+	position: relative;
+	font-size: 16px;
+}
+
+.bg-unmark a .checkBox {
+	color: #69B24A;
+}
+
+.bg-unmark {
+	background: #dff0d8;
+}
+
+.bg-unsubmit a .checkBox {
+	color: #CFBB56;
+}
+
+.bg-unsubmit {
+	background: #fcf8e3;
+}
+
+.bg-missed a .checkBox {
+	color: #CF5656;
+}
+
+.bg-missed {
+	background: #f2dede;
+}
+
+.bg-undone a .checkBox {
+	color: #000000;
+}
+
+.bg-undone {
+	background: #FCFCFC;
+}
+
+/* Refer to http://css-tricks.com/line-on-sides-headers/ */
+.horizontal-rule {
+	line-height: 0.5;
+	text-align: left;
+}
+
+.horizontal-rule span {
+	color: #ffd300;
+	font-weight: bold;
+	display: inline-block;
+	position: relative; 
+	text-shadow: 0 1px 2px rgba(0,0,0,0.8);
+	padding-left: 10px;
+	padding-right: 10px; 
+}
+
+.horizontal-rule span:after {
+	content: "";
+	position: absolute;
+	height: 5px;
+	border-bottom: 1px solid #ffd300;
+	border-top: 1px solid #ffd300;
+	top: 0;
+}
+
+.tasks-list-unmark .horizontal-rule span:after {
+	width: 100px;
+}
+
+.tasks-list-unsubmit .horizontal-rule span:after {
+	width: 130px;
+}
+
+.tasks-list-missed .horizontal-rule span:after {
+	width: 125px;
+}
+
+.tasks-list-undone .horizontal-rule span:after {
+	width: 170px;
+}
+
+.horizontal-rule span:after {
+	left: 100%;
+	margin-left: 0px;
+}
+
+.deadLine {
+	margin-right: 50%;
+	float: right;
+}
+
+.count {
+	float: right;
+}
+
+/* Responsive Styling*/
+
+@media (max-width: 1400px) {
+
+	.deadLine {
+		margin-right: 30%;
+	}
+
+}
+
+@media (max-width: 1050px) {
+
+	.deadLine {
+		margin-right: 10%;
+	}
+
+}
+
+@media (max-width: 850px) {
+
+	.deadLine {
+		margin-right: 5%;
+	}
+
+	#lists {
+		width: 200px;
+	}
+
+	#tasks {
+		left: 200px;
+	}
+
+}
+
+@media (max-width: 768px) {
+
+	.deadLine {
+		margin-right: 5%;
+	}
+
+	#lists {
+		width: 100%;
+		z-index: 99;
+		height: 40px;
+	}
+
+	#tasks {
+		left: 0px;
+		top: 40px;
+	}
+
+}
+
+@media (min-width: 501px) {
+
+	.taskLabel {
+		float: left;
+	}
+
+}
+
+@media (max-width: 500px) {
+
+	.deadLine {
+		display: block;
+		margin-top: 10px;
+		float: left;
+	}
+
+	#lists {
+		width: 100%;
+		z-index: 99;
+		height: 40px;
+	}
+
+	#tasks {
+		left: 0px;
+		top: 40px;
+	}
+
+	.taskItem {
+		height: 60px;
+	}
+
+	.taskLabel {
+		display: block;
+	}
+
+	.taskItem-checkBox {
+		top: 21px;
+	}
+
+	.dontCare-checkBox {
+		top: 19px;
+	}
+
+	.taskItem-title {
+		font-size: 13px;
+	}
+
+
+}
+
+/* ----------------------------------------------------- */
